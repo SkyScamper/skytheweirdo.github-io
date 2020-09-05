@@ -45,3 +45,12 @@ a{
 .Shop_BTN{
 	text-align:center;
 }
+.UpdateDiv{
+	margin-top:200px;
+	box-shadow:1px 1px #fcdee3;
+	height:100px;
+	padding:20px;
+	width:500px;
+	overflow-y:scroll;
+	text-align:center;
+}
