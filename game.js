@@ -3,7 +3,6 @@
 let Click_Btn_img = document.querySelector("#Click_Btn");
 let Click_Counter_span = document.querySelector("#MoneySpan");
 let Clicker_Item = document.querySelectorAll(".Clicker_Item");
-let LockedShops = document.querySelectorAll(".LockedShops");
 let ClicksPerSec = document.querySelector("#ClicksPerSec");
 let audio1 = document.querySelector("#Audio1");
 let audio2 = document.querySelector("#Audio2");
@@ -86,7 +85,7 @@ window.setInterval(function(e){
 		audio1.volume = 0.2;
 		audio1.play();
 	}
-
+	let LockedShops = document.querySelectorAll(".LockedShops");
 	let Shops = LockedShops[0].id;
 	if(Shops == "1" && Money >= 10000 && LockedShops[0].classList.contains("LockedShops")){
 		LockedShops[0].style.display = "block";
