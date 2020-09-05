@@ -6,6 +6,16 @@ a{
 	color:white;
 	text-decoration:none;
 }
+
+.MusicDiv{
+	padding:10px;
+}
+.MusicBtns{
+	color:black;
+}
+.MusicBtns:hover{
+	color:red;
+}
 #Click_Btn{
 	border-radius:100%;
 	padding:25px;
@@ -45,6 +55,7 @@ a{
 .Shop_BTN{
 	text-align:center;
 }
+
 .UpdateDiv{
 	margin-top:200px;
 	box-shadow:1px 1px #fcdee3;
