@@ -131,7 +131,7 @@ document.querySelector("#Stop").addEventListener("click", function(e){
 });
 
 document.querySelector("#Play").addEventListener("click", function(e){
-	if(audio1.paused && !audio3.duration > 0){
+	if(audio1.paused){
 		e.preventDefault();
 		audio1.play();
 	} else if(audio2.paused && !audio1.duration > 0){
