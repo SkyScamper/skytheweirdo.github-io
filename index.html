@@ -1,0 +1,82 @@
+<!-- 
+	* Music was created by SwiftlyWerehog or Kyle Hulgan *
+	* Game was designed and created by Jon Scholz *
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker Game</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<meta name="author" content="Jon Scholz">
+	<meta name="author" content="Kyle Hulgan">
+</head>
+<body>
+	<div class="GameDiv">
+		<div class="Clicker_Div">
+			<h1 id="Header">Money: $<span id="MoneySpan">0</span></h1>
+			<h3 id="ClicksPerSec">0 <span>per second</span></h3>
+			<a href=""><img src="dollar.png" id="Click_Btn" width="100px" height="100px"></a>
+		</div>
+		<div class="Clicker_Shop">
+			<a class="Shop_BTN" href="">
+				<div id="100" class="Clicker_Item">
+					<h2>$100</h2>
+					<h2>1 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN" href="">
+				<div id="1000" class="Clicker_Item">
+					<h2>$1000</h2>
+					<h2>5 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="1" href="">
+				<div id="10000" class="Clicker_Item">
+					<h2>$10000</h2>
+					<h2>10 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="2" href="">
+				<div id="100000" class="Clicker_Item">
+					<h2>$100000</h2>
+					<h2>50 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="3" href="">
+				<div id="1000000" class="Clicker_Item">
+					<h2>$1000000</h2>
+					<h2>100 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="4" href="">
+				<div id="10000000" class="Clicker_Item">
+					<h2>$10000000</h2>
+					<h2>500 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="5" href="">
+				<div id="100000000" class="Clicker_Item">
+					<h2>$100000000</h2>
+					<h2>1000 per second</h2>
+				</div>
+			</a>
+			<a class="Shop_BTN LockedShops" id="6" href="">
+				<div id="1000000000" class="Clicker_Item">
+					<h2>$1000000000</h2>
+					<h2>5000 per second</h2>
+				</div>
+			</a>
+		</div>
+	</div>
+	<audio id="Audio1">
+    	<source src="Boss_(Separate_Ways)_v2.mp3">
+	</audio>
+	<audio id="Audio2">
+		<source src="Final_Goodbye_(final_phase).mp3">
+	</audio>
+	<audio id="Audio3">
+		<source src="Separate_Ways_Worlds_Apart_[FINAL_BOSS_ORCHESTRAL_REMIX_v2].mp3">
+	</audio>
+	<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
