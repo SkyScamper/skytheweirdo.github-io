@@ -6,6 +6,9 @@ a{
 	color:white;
 	text-decoration:none;
 }
+/* 
+	Admin tools for testing
+*/
 
 .MusicDiv{
 	padding:10px;
@@ -29,7 +32,7 @@ a{
 .GameDiv{
 	display:flex;
 }
-.Clicker_Shop{
+.Shop{
 	width:25%;
 	display:block;
 	box-shadow:0px 0px 1px 1px #fcdee3;
@@ -55,8 +58,22 @@ a{
 .Shop_BTN{
 	text-align:center;
 }
+.TabDiv{
+	box-shadow:1px 1px #fcdee3;
+	text-align:center;
+	padding:10px;
+	position:relative;
+}
+.ShopTab{
+	font-size:25px;
+}
+.ShopTab:hover{
+	color:#fcdee3;
+	text-decoration:underline;
+}
 
 .UpdateDiv{
+	float:right;
 	margin-top:200px;
 	box-shadow:1px 1px #fcdee3;
 	height:100px;
@@ -64,4 +81,7 @@ a{
 	width:500px;
 	overflow-y:scroll;
 	text-align:center;
+}
+#TabClosed{
+	display:none;
 }
