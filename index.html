@@ -23,9 +23,6 @@
 	<meta name="author" content="Kyle Hulgan">
 </head>
 <body>
-	<div>
-		<a id="AdminTog" href="">Toggle</a>
-	</div>
 	<div class="MusicDiv">
 		<a href="" class="MusicBtns" id="Stop">Stop </a>|
 		<a href="" class="MusicBtns" id="Play"> Play</a>
@@ -36,55 +33,69 @@
 			<h3 id="ClicksPerSec">0 <span>per second</span></h3>
 			<a href=""><img src="dollar.png" id="Click_Btn" width="100px" height="100px"></a>
 		</div>
-		<div class="Clicker_Shop">
-			<a class="Shop_BTN" href="">
-				<div id="1" class="Clicker_Item">
-					<h2>$10</h2>
-					<h2>1 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN" href="">
-				<div id="2" class="Clicker_Item">
-					<h2>$100</h2>
-					<h2>5 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="1" href="">
-				<div id="3" class="Clicker_Item">
-					<h2>$500</h2>
-					<h2>10 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="2" href="">
-				<div id="4" class="Clicker_Item">
-					<h2>$2500</h2>
-					<h2>50 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="3" href="">
-				<div id="5" class="Clicker_Item">
-					<h2>$10000</h2>
-					<h2>100 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="4" href="">
-				<div id="6" class="Clicker_Item">
-					<h2>$50000</h2>
-					<h2>250 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="5" href="">
-				<div id="7" class="Clicker_Item">
-					<h2>$300000</h2>
-					<h2>1000 per second</h2>
-				</div>
-			</a>
-			<a class="Shop_BTN LockedShops" id="6" href="">
-				<div id="8" class="Clicker_Item">
-					<h2>$1000000</h2>
-					<h2>2500 per second</h2>
-				</div>
-			</a>
+		<div class="Shop">
+			<div class="TabDiv">
+				<a href="" class="ShopTab" id="Shop">Shop</a><span style="color:white"> | </span>
+				<a href="" class="ShopTab" id="Extra">Extra</a>
+			</div>
+			<div class="Clicker_Shop">
+				<a class="Shop_BTN" href="">
+					<div id="1" class="Clicker_Item">
+						<h2>$10</h2>
+						<h2>1 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN" href="">
+					<div id="2" class="Clicker_Item">
+						<h2>$100</h2>
+						<h2>5 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="1" href="">
+					<div id="3" class="Clicker_Item">
+						<h2>$500</h2>
+						<h2>10 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="2" href="">
+					<div id="4" class="Clicker_Item">
+						<h2>$2500</h2>
+						<h2>50 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="3" href="">
+					<div id="5" class="Clicker_Item">
+						<h2>$10000</h2>
+						<h2>100 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="4" href="">
+					<div id="6" class="Clicker_Item">
+						<h2>$50000</h2>
+						<h2>250 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="5" href="">
+					<div id="7" class="Clicker_Item">
+						<h2>$300000</h2>
+						<h2>1000 per second</h2>
+					</div>
+				</a>
+				<a class="Shop_BTN LockedShops" id="6" href="">
+					<div id="8" class="Clicker_Item">
+						<h2>$1000000</h2>
+						<h2>2500 per second</h2>
+					</div>
+				</a>
+			</div>
+			<div class="Clicker_Shop" id="TabClosed">
+				<a class="Shop_BTN" href="">
+					<div id="100" class="Clicker_Item">
+						<h2>$1000</h2>
+						<h2>Double the click</h2>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="UpdateDiv">
@@ -92,8 +103,6 @@
 		<ul>
 			<li>Added Bug fix/ addition div</li>
 			<li>Fixed Locked Shops not being unlocked at certain point.</li>
-			<li>Added music pause and play buttons</li>
-			<li>Made it so that the more you buy of a product, the higher the cost.</li>
 		</ul>
 	</div>
 	<audio id="Audio1">
