@@ -3,11 +3,13 @@
 let Click_Btn_img = document.querySelector("#Click_Btn");
 let Click_Counter_span = document.querySelector("#MoneySpan");
 let Clicker_Item = document.querySelectorAll(".Clicker_Item");
+let Clicker_Shop = document.querySelectorAll(".Clicker_Shop");
 let Item_Header = document.querySelectorAll(".Clicker_Item h2");
 let ClicksPerSec = document.querySelector("#ClicksPerSec");
 let ATDIV = document.querySelectorAll(".AdminToolBtn");
 let AdminInput = document.querySelector("#AdminInput");
 let AdminBtns = document.querySelectorAll(".AdminBtns");
+let TabBtns = document.querySelectorAll(".ShopTab");
 let Admin = document.querySelector("#Admin");
 let audio1 = document.querySelector("#Audio1");
 let audio2 = document.querySelector("#Audio2");
@@ -25,12 +27,32 @@ let Prices = {
 	Price_G:300000,
 	Price_H:1000000,
 }
+let Extra_Price = 1000;
 
 Click_Btn_img.addEventListener("click", function(e){
 	e.preventDefault();
 	Money = Money + Self_Click;
 	Click_Counter_span.innerHTML = Money;
 
+});
+
+TabBtns.forEach(function(Btn){
+	Btn.addEventListener("click", function(e){
+		e.preventDefault();
+		var ItemId = e.currentTarget.id;
+		switch(ItemId){
+			case "Shop":
+				Clicker_Shop[1].setAttribute("id", "TabClosed");
+				Clicker_Shop[0].removeAttribute("id");
+				break;
+			case "Extra":
+				Clicker_Shop[0].setAttribute("id", "TabClosed");
+				Clicker_Shop[1].removeAttribute("id");
+				break;
+			default:
+				console.warn("Tab doesn't exist");
+		}
+	});
 });
 
 Clicker_Item.forEach(function(Item){
@@ -101,12 +123,21 @@ Clicker_Item.forEach(function(Item){
 			var innerText = Item.children[0];
 			innerText.innerHTML = parseInt(Prices.Price_H);
 			MperS_Click = MperS_Click + 5000;
+		} else if(ItemId == "100" && Money >= Extra_Price){
+			Money = Money - Extra_Price;
+			Extra_Price = Extra_Price * 2;
+			Extra_Price = parseInt(Extra_Price);
+			Click_Counter_span.innerHTML = Money;
+			var innerText = Item.children[0];
+			innerText.innerHTML = parseInt(Extra_Price);
+			Self_Click = Self_Click * 2;
 		} else {
 			console.warn("Not enough funds to purchase");
 		}
 	});
 	
 });
+
 
 function Music(){
 	audio1.volume = 0.2;
@@ -131,7 +162,7 @@ document.querySelector("#Stop").addEventListener("click", function(e){
 });
 
 document.querySelector("#Play").addEventListener("click", function(e){
-	if(audio1.paused){
+	if(audio1.paused && !audio3.duration > 0){
 		e.preventDefault();
 		audio1.play();
 	} else if(audio2.paused && !audio1.duration > 0){
